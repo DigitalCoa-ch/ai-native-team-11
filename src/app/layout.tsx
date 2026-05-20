@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CampusAI Navigator — Student Support System",
-  description: "AI-powered student support assistant that organizes assignments, summarizes lectures, and keeps university students on track. Stop stressing, start succeeding.",
+  title: "CampusAI Navigator | Your Semester. Automated.",
+  description:
+    "Turn the chaos of syllabi, lectures, and deadlines into a crystal-clear path to graduation. CampusAI does the heavy lifting so you can focus on learning.",
 };
 
 export default function RootLayout({
@@ -12,13 +13,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Geist:wght@400;500;600;700;800&display=swap"
+        />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="bg-background text-on-surface antialiased font-body-md">
+        {children}
+      </body>
     </html>
   );
 }
